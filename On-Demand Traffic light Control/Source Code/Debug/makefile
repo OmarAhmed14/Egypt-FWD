@@ -8,6 +8,13 @@ RM := rm -rf
 
 # All of the sources participating in the build are defined here
 -include sources.mk
+-include main/subdir.mk
+-include MCAL/TIMER/subdir.mk
+-include MCAL/INTERRUPT/subdir.mk
+-include MCAL/DIO/subdir.mk
+-include HAL/LED/subdir.mk
+-include HAL/BUTTON/subdir.mk
+-include APP/subdir.mk
 -include subdir.mk
 -include objects.mk
 
