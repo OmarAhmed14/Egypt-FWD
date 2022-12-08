@@ -11,7 +11,7 @@
 
 #include "LED.h"
 
-extern u32 on,off;
+extern u8 on,off;
 
 void APP_Init(void)
 {
@@ -76,6 +76,4 @@ void APP_ISR(void)
 			GPTM_delay_millisec(200);   //Delay 200 ms
 		}
 	}
-	/*Rewrite Handler Address*/
-	CallBackFn(&APP_ISR);
 }
