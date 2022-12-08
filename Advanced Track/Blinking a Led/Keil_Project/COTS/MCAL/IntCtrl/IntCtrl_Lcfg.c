@@ -3,7 +3,7 @@
 
 /*Enter Interrupts What YOu want to Enable Them*/
 
-const NVIC_Enabled_Interrupt Enabled_Interrupts_0_31[Number_Enabled_Interrupts]={{GPIO_F ,        1          ,3}};
+const NVIC_Enabled_Interrupt Enabled_Interrupts_0_31[Number_Enabled_Interrupts]={{_16_32_Bit_Timer0A ,        1          ,3}};
 
 
 

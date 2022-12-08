@@ -9,4 +9,6 @@ void GPTM_delay_sec (u8 delay_Sec);
 
 void GPTM_delay_millisec (u8 delay_ms);
 
+void GPTM_CallBackFn(void(*ptr)(void));
+
 #endif

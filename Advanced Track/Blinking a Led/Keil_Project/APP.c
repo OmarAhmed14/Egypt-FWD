@@ -11,7 +11,7 @@
 
 #include "APP.h"
 
-extern u8 on,off;
+//extern u8 on,off;
 
 void APP_Init(void)
 {
@@ -45,35 +45,3 @@ void APP_Start(u8 OFF_TIME , u8 ON_TIME)
 	GPTM_delay_sec(OFF_TIME);
 }
 
-void APP_ISR(void)
-{
-	on=0,off=0;
-	
-	/*Delay 1 sec*/
-	GPTM_delay_sec(1);
-	
-	/*set on time*/	
-	while (DIO_READChannel(DIO_PORTF,PIN4))
-	{
-		if (!DIO_READChannel(DIO_PORTF,PIN0))
-		{
-			on++;
-			GPTM_delay_sec(1);           // Delay 1 sec
-			GPTM_delay_millisec(500);   //Delay 500 ms
-		}
-	}
-	
-	/*Delay 0.5 sec*/
-	GPTM_delay_millisec(500);
-	
-	/*Set off time*/
-	while (DIO_READChannel(DIO_PORTF,PIN4))
-	{
-		if (!DIO_READChannel(DIO_PORTF,PIN0))
-		{
-			off++;
-			GPTM_delay_sec(1);          // Delay 1 sec
-			GPTM_delay_millisec(200);   //Delay 200 ms
-		}
-	}
-}

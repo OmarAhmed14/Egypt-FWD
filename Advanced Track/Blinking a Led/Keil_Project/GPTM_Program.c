@@ -7,6 +7,8 @@
 
 #include "DIO_Interface.h"
 
+void (*PtrToFn)(void)=0;
+
 void GPTM_Init(void)
 {
 	/*Disable for timer*/
@@ -100,8 +102,16 @@ void GPTM_delay_millisec (u8 delay_ms)
 	}
 }
 
+void GPTM_CallBackFn(void(*ptr)(void))
+{
+	PtrToFn=ptr;
+}
+
 void TIMER0A_Handler(void)
 {
-	DIO_DirectionChannel(DIO_PORTF,PIN1,OUTPUT_PIN);
-	DIO_WriteChannel(DIO_PORTF,PIN1,HIGH);
+	if (PtrToFn!=0)
+	{
+		PtrToFn();
+		Set_Bit_BitBandingAlias(&GPTMICR,GPTMICR_TATOCINT);
+	}
 }
