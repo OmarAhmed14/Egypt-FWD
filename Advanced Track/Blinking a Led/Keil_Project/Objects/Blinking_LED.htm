@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\Blinking_LED.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\Blinking_LED.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6140101: Last Updated: Thu Dec  8 01:21:59 2022
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6140101: Last Updated: Thu Dec  8 09:20:58 2022
 <BR><P>
 <H3>Maximum Stack Usage =         32 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -146,7 +146,6 @@ Function Pointers
  <LI><a href="#[3a]">ADC1SS1_Handler</a> from startup_tm4c123.o(.text) referenced from startup_tm4c123.o(RESET)
  <LI><a href="#[3b]">ADC1SS2_Handler</a> from startup_tm4c123.o(.text) referenced from startup_tm4c123.o(RESET)
  <LI><a href="#[3c]">ADC1SS3_Handler</a> from startup_tm4c123.o(.text) referenced from startup_tm4c123.o(RESET)
- <LI><a href="#[79]">APP_ISR</a> from app.o(.text.APP_ISR) referenced 2 times from app.o(.text.APP_ISR)
  <LI><a href="#[79]">APP_ISR</a> from app.o(.text.APP_ISR) referenced 2 times from app.o(.text.APP_Init)
  <LI><a href="#[4]">BusFault_Handler</a> from startup_tm4c123.o(.text) referenced from startup_tm4c123.o(RESET)
  <LI><a href="#[31]">CAN0_Handler</a> from startup_tm4c123.o(.text) referenced from startup_tm4c123.o(RESET)
@@ -1250,25 +1249,23 @@ Global Symbols
 
 <P><STRONG><a name="[c2]"></a>__semihosting_library_function</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, indicate_semi.o(.text), UNUSED)
 
-<P><STRONG><a name="[79]"></a>APP_ISR</STRONG> (Thumb, 132 bytes, Stack size 16 bytes, app.o(.text.APP_ISR))
+<P><STRONG><a name="[79]"></a>APP_ISR</STRONG> (Thumb, 122 bytes, Stack size 16 bytes, app.o(.text.APP_ISR))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = APP_ISR &rArr; DIO_READChannel
 </UL>
 <BR>[Calls]<UL><LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPTM_delay_sec
 <LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPTM_delay_millisec
 <LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DIO_READChannel
-<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CallBackFn
 </UL>
-<BR>[Address Reference Count : 2]<UL><LI> app.o(.text.APP_Init)
-<LI> app.o(.text.APP_ISR)
+<BR>[Address Reference Count : 1]<UL><LI> app.o(.text.APP_Init)
 </UL>
-<P><STRONG><a name="[91]"></a>APP_Init</STRONG> (Thumb, 90 bytes, Stack size 8 bytes, app.o(.text.APP_Init))
+<P><STRONG><a name="[90]"></a>APP_Init</STRONG> (Thumb, 90 bytes, Stack size 8 bytes, app.o(.text.APP_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = APP_Init &rArr; IntCtrl_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IntCtrl_Init
 <LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DIO_PULLUP_PIN
 <LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DIO_ENInterrupt
 <LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DIO_DirectionChannel
-<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CallBackFn
+<LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CallBackFn
 </UL>
 <BR>[Called By]<UL><LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -1282,24 +1279,23 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[90]"></a>CallBackFn</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, dio_program.o(.text.CallBackFn))
-<BR><BR>[Called By]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;APP_Init
-<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;APP_ISR
+<P><STRONG><a name="[91]"></a>CallBackFn</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, dio_program.o(.text.CallBackFn))
+<BR><BR>[Called By]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;APP_Init
 </UL>
 
 <P><STRONG><a name="[92]"></a>DIO_DirectionChannel</STRONG> (Thumb, 258 bytes, Stack size 0 bytes, dio_program.o(.text.DIO_DirectionChannel))
-<BR><BR>[Called By]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;APP_Init
+<BR><BR>[Called By]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;APP_Init
 <LI><a href="#[1d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIMER0A_Handler
 </UL>
 
 <P><STRONG><a name="[95]"></a>DIO_ENInterrupt</STRONG> (Thumb, 216 bytes, Stack size 8 bytes, dio_program.o(.text.DIO_ENInterrupt))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = DIO_ENInterrupt
 </UL>
-<BR>[Called By]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;APP_Init
+<BR>[Called By]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;APP_Init
 </UL>
 
 <P><STRONG><a name="[93]"></a>DIO_PULLUP_PIN</STRONG> (Thumb, 276 bytes, Stack size 0 bytes, dio_program.o(.text.DIO_PULLUP_PIN))
-<BR><BR>[Called By]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;APP_Init
+<BR><BR>[Called By]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;APP_Init
 </UL>
 
 <P><STRONG><a name="[8e]"></a>DIO_READChannel</STRONG> (Thumb, 158 bytes, Stack size 8 bytes, dio_program.o(.text.DIO_READChannel))
@@ -1336,7 +1332,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IntCtrl_BasePriority
 </UL>
-<BR>[Called By]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;APP_Init
+<BR>[Called By]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;APP_Init
 </UL>
 
 <P><STRONG><a name="[77]"></a>MCU_CLOCK_PERIPHERALS</STRONG> (Thumb, 58 bytes, Stack size 8 bytes, mcu_program.o(.text.MCU_CLOCK_PERIPHERALS))
@@ -1359,7 +1355,7 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = main &rArr; APP_Init &rArr; IntCtrl_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;APP_Start
-<LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;APP_Init
+<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;APP_Init
 </UL>
 <BR>[Called By]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_main
 </UL>

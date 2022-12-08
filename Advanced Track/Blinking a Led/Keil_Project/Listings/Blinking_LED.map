@@ -52,7 +52,6 @@ Section Cross References
     app.o(.text.APP_ISR) refers to gptm_program.o(.text.GPTM_delay_sec) for GPTM_delay_sec
     app.o(.text.APP_ISR) refers to dio_program.o(.text.DIO_READChannel) for DIO_READChannel
     app.o(.text.APP_ISR) refers to gptm_program.o(.text.GPTM_delay_millisec) for GPTM_delay_millisec
-    app.o(.text.APP_ISR) refers to dio_program.o(.text.CallBackFn) for CallBackFn
     app.o(.ARM.exidx.text.APP_ISR) refers to app.o(.text.APP_ISR) for [Anonymous Symbol]
     app.o(.text.APP_Start) refers to dio_program.o(.text.DIO_WriteChannel) for DIO_WriteChannel
     app.o(.text.APP_Start) refers to gptm_program.o(.text.GPTM_delay_sec) for GPTM_delay_sec
@@ -356,25 +355,25 @@ Image Symbol Table
     .text                                    0x00000484   Section        2  use_no_semi.o(.text)
     .text                                    0x00000486   Section        0  indicate_semi.o(.text)
     [Anonymous Symbol]                       0x00000488   Section        0  app.o(.text.APP_ISR)
-    [Anonymous Symbol]                       0x0000050c   Section        0  app.o(.text.APP_Init)
-    [Anonymous Symbol]                       0x00000568   Section        0  app.o(.text.APP_Start)
-    [Anonymous Symbol]                       0x00000590   Section        0  dio_program.o(.text.CallBackFn)
-    [Anonymous Symbol]                       0x0000059c   Section        0  dio_program.o(.text.DIO_DirectionChannel)
-    [Anonymous Symbol]                       0x000006a0   Section        0  dio_program.o(.text.DIO_ENInterrupt)
-    [Anonymous Symbol]                       0x00000778   Section        0  dio_program.o(.text.DIO_PULLUP_PIN)
-    [Anonymous Symbol]                       0x0000088c   Section        0  dio_program.o(.text.DIO_READChannel)
-    [Anonymous Symbol]                       0x0000092c   Section        0  dio_program.o(.text.DIO_WriteChannel)
-    [Anonymous Symbol]                       0x00000ac8   Section        0  dio_program.o(.text.GPIOF_Handler)
-    [Anonymous Symbol]                       0x00000af4   Section        0  gptm_program.o(.text.GPTM_delay_millisec)
-    [Anonymous Symbol]                       0x00000b60   Section        0  gptm_program.o(.text.GPTM_delay_sec)
-    [Anonymous Symbol]                       0x00000bd0   Section        0  intctrl_lcfg.o(.text.IntCtrl_BasePriority)
-    [Anonymous Symbol]                       0x00000bdc   Section        0  intctrl_program.o(.text.IntCtrl_Init)
-    [Anonymous Symbol]                       0x00000c9c   Section        0  mcu_program.o(.text.MCU_CLOCK_PERIPHERALS)
-    [Anonymous Symbol]                       0x00000cd8   Section        0  mcu_program.o(.text.Mcu_InitClock)
-    [Anonymous Symbol]                       0x00000d18   Section        0  gptm_program.o(.text.TIMER0A_Handler)
-    [Anonymous Symbol]                       0x00000d30   Section        0  main.o(.text.main)
-    $v0                                      0x00000d56   Number         0  fpinit.o(x$fpl$fpinit)
-    x$fpl$fpinit                             0x00000d56   Section       26  fpinit.o(x$fpl$fpinit)
+    [Anonymous Symbol]                       0x00000504   Section        0  app.o(.text.APP_Init)
+    [Anonymous Symbol]                       0x00000560   Section        0  app.o(.text.APP_Start)
+    [Anonymous Symbol]                       0x00000588   Section        0  dio_program.o(.text.CallBackFn)
+    [Anonymous Symbol]                       0x00000594   Section        0  dio_program.o(.text.DIO_DirectionChannel)
+    [Anonymous Symbol]                       0x00000698   Section        0  dio_program.o(.text.DIO_ENInterrupt)
+    [Anonymous Symbol]                       0x00000770   Section        0  dio_program.o(.text.DIO_PULLUP_PIN)
+    [Anonymous Symbol]                       0x00000884   Section        0  dio_program.o(.text.DIO_READChannel)
+    [Anonymous Symbol]                       0x00000924   Section        0  dio_program.o(.text.DIO_WriteChannel)
+    [Anonymous Symbol]                       0x00000ac0   Section        0  dio_program.o(.text.GPIOF_Handler)
+    [Anonymous Symbol]                       0x00000aec   Section        0  gptm_program.o(.text.GPTM_delay_millisec)
+    [Anonymous Symbol]                       0x00000b58   Section        0  gptm_program.o(.text.GPTM_delay_sec)
+    [Anonymous Symbol]                       0x00000bc8   Section        0  intctrl_lcfg.o(.text.IntCtrl_BasePriority)
+    [Anonymous Symbol]                       0x00000bd4   Section        0  intctrl_program.o(.text.IntCtrl_Init)
+    [Anonymous Symbol]                       0x00000c94   Section        0  mcu_program.o(.text.MCU_CLOCK_PERIPHERALS)
+    [Anonymous Symbol]                       0x00000cd0   Section        0  mcu_program.o(.text.Mcu_InitClock)
+    [Anonymous Symbol]                       0x00000d10   Section        0  gptm_program.o(.text.TIMER0A_Handler)
+    [Anonymous Symbol]                       0x00000d28   Section        0  main.o(.text.main)
+    $v0                                      0x00000d4e   Number         0  fpinit.o(x$fpl$fpinit)
+    x$fpl$fpinit                             0x00000d4e   Section       26  fpinit.o(x$fpl$fpinit)
     .bss                                     0x20000000   Section       96  libspace.o(.bss)
     BIT_EN                                   0x20000060   Data           4  intctrl_program.o(.bss.BIT_EN)
     [Anonymous Symbol]                       0x20000060   Section        0  intctrl_program.o(.bss.BIT_EN)
@@ -606,31 +605,31 @@ Image Symbol Table
     __I$use$semihosting                      0x00000485   Thumb Code     0  use_no_semi.o(.text)
     __use_no_semihosting_swi                 0x00000485   Thumb Code     2  use_no_semi.o(.text)
     __semihosting_library_function           0x00000487   Thumb Code     0  indicate_semi.o(.text)
-    APP_ISR                                  0x00000489   Thumb Code   132  app.o(.text.APP_ISR)
-    APP_Init                                 0x0000050d   Thumb Code    90  app.o(.text.APP_Init)
-    APP_Start                                0x00000569   Thumb Code    40  app.o(.text.APP_Start)
-    CallBackFn                               0x00000591   Thumb Code    12  dio_program.o(.text.CallBackFn)
-    DIO_DirectionChannel                     0x0000059d   Thumb Code   258  dio_program.o(.text.DIO_DirectionChannel)
-    DIO_ENInterrupt                          0x000006a1   Thumb Code   216  dio_program.o(.text.DIO_ENInterrupt)
-    DIO_PULLUP_PIN                           0x00000779   Thumb Code   276  dio_program.o(.text.DIO_PULLUP_PIN)
-    DIO_READChannel                          0x0000088d   Thumb Code   158  dio_program.o(.text.DIO_READChannel)
-    DIO_WriteChannel                         0x0000092d   Thumb Code   410  dio_program.o(.text.DIO_WriteChannel)
-    GPIOF_Handler                            0x00000ac9   Thumb Code    42  dio_program.o(.text.GPIOF_Handler)
-    GPTM_delay_millisec                      0x00000af5   Thumb Code   106  gptm_program.o(.text.GPTM_delay_millisec)
-    GPTM_delay_sec                           0x00000b61   Thumb Code   110  gptm_program.o(.text.GPTM_delay_sec)
-    IntCtrl_BasePriority                     0x00000bd1   Thumb Code    10  intctrl_lcfg.o(.text.IntCtrl_BasePriority)
-    IntCtrl_Init                             0x00000bdd   Thumb Code   192  intctrl_program.o(.text.IntCtrl_Init)
-    MCU_CLOCK_PERIPHERALS                    0x00000c9d   Thumb Code    58  mcu_program.o(.text.MCU_CLOCK_PERIPHERALS)
-    Mcu_InitClock                            0x00000cd9   Thumb Code    62  mcu_program.o(.text.Mcu_InitClock)
-    TIMER0A_Handler                          0x00000d19   Thumb Code    24  gptm_program.o(.text.TIMER0A_Handler)
-    main                                     0x00000d31   Thumb Code    38  main.o(.text.main)
-    _fp_init                                 0x00000d57   Thumb Code    26  fpinit.o(x$fpl$fpinit)
-    __fplib_config_fpu_vfp                   0x00000d6f   Thumb Code     0  fpinit.o(x$fpl$fpinit)
-    __fplib_config_pureend_doubles           0x00000d6f   Thumb Code     0  fpinit.o(x$fpl$fpinit)
-    Enabled_Interrupts_0_31                  0x00000d70   Data          12  intctrl_lcfg.o(.rodata.Enabled_Interrupts_0_31)
-    MCU_Clocked_Peripherals                  0x00000d7c   Data           6  mcu_program.o(.rodata.MCU_Clocked_Peripherals)
-    Region$$Table$$Base                      0x00000d84   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x00000d94   Number         0  anon$$obj.o(Region$$Table)
+    APP_ISR                                  0x00000489   Thumb Code   122  app.o(.text.APP_ISR)
+    APP_Init                                 0x00000505   Thumb Code    90  app.o(.text.APP_Init)
+    APP_Start                                0x00000561   Thumb Code    40  app.o(.text.APP_Start)
+    CallBackFn                               0x00000589   Thumb Code    12  dio_program.o(.text.CallBackFn)
+    DIO_DirectionChannel                     0x00000595   Thumb Code   258  dio_program.o(.text.DIO_DirectionChannel)
+    DIO_ENInterrupt                          0x00000699   Thumb Code   216  dio_program.o(.text.DIO_ENInterrupt)
+    DIO_PULLUP_PIN                           0x00000771   Thumb Code   276  dio_program.o(.text.DIO_PULLUP_PIN)
+    DIO_READChannel                          0x00000885   Thumb Code   158  dio_program.o(.text.DIO_READChannel)
+    DIO_WriteChannel                         0x00000925   Thumb Code   410  dio_program.o(.text.DIO_WriteChannel)
+    GPIOF_Handler                            0x00000ac1   Thumb Code    42  dio_program.o(.text.GPIOF_Handler)
+    GPTM_delay_millisec                      0x00000aed   Thumb Code   106  gptm_program.o(.text.GPTM_delay_millisec)
+    GPTM_delay_sec                           0x00000b59   Thumb Code   110  gptm_program.o(.text.GPTM_delay_sec)
+    IntCtrl_BasePriority                     0x00000bc9   Thumb Code    10  intctrl_lcfg.o(.text.IntCtrl_BasePriority)
+    IntCtrl_Init                             0x00000bd5   Thumb Code   192  intctrl_program.o(.text.IntCtrl_Init)
+    MCU_CLOCK_PERIPHERALS                    0x00000c95   Thumb Code    58  mcu_program.o(.text.MCU_CLOCK_PERIPHERALS)
+    Mcu_InitClock                            0x00000cd1   Thumb Code    62  mcu_program.o(.text.Mcu_InitClock)
+    TIMER0A_Handler                          0x00000d11   Thumb Code    24  gptm_program.o(.text.TIMER0A_Handler)
+    main                                     0x00000d29   Thumb Code    38  main.o(.text.main)
+    _fp_init                                 0x00000d4f   Thumb Code    26  fpinit.o(x$fpl$fpinit)
+    __fplib_config_fpu_vfp                   0x00000d67   Thumb Code     0  fpinit.o(x$fpl$fpinit)
+    __fplib_config_pureend_doubles           0x00000d67   Thumb Code     0  fpinit.o(x$fpl$fpinit)
+    Enabled_Interrupts_0_31                  0x00000d68   Data          12  intctrl_lcfg.o(.rodata.Enabled_Interrupts_0_31)
+    MCU_Clocked_Peripherals                  0x00000d74   Data           6  mcu_program.o(.rodata.MCU_Clocked_Peripherals)
+    Region$$Table$$Base                      0x00000d7c   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x00000d8c   Number         0  anon$$obj.o(Region$$Table)
     __libspace_start                         0x20000000   Data          96  libspace.o(.bss)
     __temporary_stack_top$libspace           0x20000060   Data           0  libspace.o(.bss)
     off                                      0x20000074   Data           1  main.o(.bss.off)
@@ -645,9 +644,9 @@ Memory Map of the image
 
   Image Entry point : 0x000002f1
 
-  Load Region LR_1 (Base: 0x00000000, Size: 0x00000d94, Max: 0xffffffff, ABSOLUTE)
+  Load Region LR_1 (Base: 0x00000000, Size: 0x00000d8c, Max: 0xffffffff, ABSOLUTE)
 
-    Execution Region ER_RO (Exec base: 0x00000000, Load base: 0x00000000, Size: 0x00000d94, Max: 0xffffffff, ABSOLUTE)
+    Execution Region ER_RO (Exec base: 0x00000000, Load base: 0x00000000, Size: 0x00000d8c, Max: 0xffffffff, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -707,47 +706,48 @@ Memory Map of the image
     0x00000484   0x00000484   0x00000002   Code   RO          236    .text               c_w.l(use_no_semi.o)
     0x00000486   0x00000486   0x00000000   Code   RO          238    .text               c_w.l(indicate_semi.o)
     0x00000486   0x00000486   0x00000002   PAD
-    0x00000488   0x00000488   0x00000084   Code   RO           96    .text.APP_ISR       app.o
-    0x0000050c   0x0000050c   0x0000005a   Code   RO           94    .text.APP_Init      app.o
-    0x00000566   0x00000566   0x00000002   PAD
-    0x00000568   0x00000568   0x00000028   Code   RO           98    .text.APP_Start     app.o
-    0x00000590   0x00000590   0x0000000c   Code   RO           18    .text.CallBackFn    dio_program.o
-    0x0000059c   0x0000059c   0x00000102   Code   RO           12    .text.DIO_DirectionChannel  dio_program.o
-    0x0000069e   0x0000069e   0x00000002   PAD
-    0x000006a0   0x000006a0   0x000000d8   Code   RO           16    .text.DIO_ENInterrupt  dio_program.o
-    0x00000778   0x00000778   0x00000114   Code   RO           14    .text.DIO_PULLUP_PIN  dio_program.o
-    0x0000088c   0x0000088c   0x0000009e   Code   RO            2    .text.DIO_READChannel  dio_program.o
-    0x0000092a   0x0000092a   0x00000002   PAD
-    0x0000092c   0x0000092c   0x0000019a   Code   RO            4    .text.DIO_WriteChannel  dio_program.o
-    0x00000ac6   0x00000ac6   0x00000002   PAD
-    0x00000ac8   0x00000ac8   0x0000002a   Code   RO           20    .text.GPIOF_Handler  dio_program.o
-    0x00000af2   0x00000af2   0x00000002   PAD
-    0x00000af4   0x00000af4   0x0000006a   Code   RO           82    .text.GPTM_delay_millisec  gptm_program.o
-    0x00000b5e   0x00000b5e   0x00000002   PAD
-    0x00000b60   0x00000b60   0x0000006e   Code   RO           80    .text.GPTM_delay_sec  gptm_program.o
-    0x00000bce   0x00000bce   0x00000002   PAD
-    0x00000bd0   0x00000bd0   0x0000000a   Code   RO           54    .text.IntCtrl_BasePriority  intctrl_lcfg.o
-    0x00000bda   0x00000bda   0x00000002   PAD
-    0x00000bdc   0x00000bdc   0x000000c0   Code   RO           63    .text.IntCtrl_Init  intctrl_program.o
-    0x00000c9c   0x00000c9c   0x0000003a   Code   RO           42    .text.MCU_CLOCK_PERIPHERALS  mcu_program.o
-    0x00000cd6   0x00000cd6   0x00000002   PAD
-    0x00000cd8   0x00000cd8   0x0000003e   Code   RO           36    .text.Mcu_InitClock  mcu_program.o
-    0x00000d16   0x00000d16   0x00000002   PAD
-    0x00000d18   0x00000d18   0x00000018   Code   RO           84    .text.TIMER0A_Handler  gptm_program.o
-    0x00000d30   0x00000d30   0x00000026   Code   RO          108    .text.main          main.o
-    0x00000d56   0x00000d56   0x0000001a   Code   RO          219    x$fpl$fpinit        fz_wm.l(fpinit.o)
-    0x00000d70   0x00000d70   0x0000000c   Data   RO           56    .rodata.Enabled_Interrupts_0_31  intctrl_lcfg.o
-    0x00000d7c   0x00000d7c   0x00000006   Data   RO           45    .rodata.MCU_Clocked_Peripherals  mcu_program.o
-    0x00000d82   0x00000d82   0x00000002   PAD
-    0x00000d84   0x00000d84   0x00000010   Data   RO          294    Region$$Table       anon$$obj.o
+    0x00000488   0x00000488   0x0000007a   Code   RO           96    .text.APP_ISR       app.o
+    0x00000502   0x00000502   0x00000002   PAD
+    0x00000504   0x00000504   0x0000005a   Code   RO           94    .text.APP_Init      app.o
+    0x0000055e   0x0000055e   0x00000002   PAD
+    0x00000560   0x00000560   0x00000028   Code   RO           98    .text.APP_Start     app.o
+    0x00000588   0x00000588   0x0000000c   Code   RO           18    .text.CallBackFn    dio_program.o
+    0x00000594   0x00000594   0x00000102   Code   RO           12    .text.DIO_DirectionChannel  dio_program.o
+    0x00000696   0x00000696   0x00000002   PAD
+    0x00000698   0x00000698   0x000000d8   Code   RO           16    .text.DIO_ENInterrupt  dio_program.o
+    0x00000770   0x00000770   0x00000114   Code   RO           14    .text.DIO_PULLUP_PIN  dio_program.o
+    0x00000884   0x00000884   0x0000009e   Code   RO            2    .text.DIO_READChannel  dio_program.o
+    0x00000922   0x00000922   0x00000002   PAD
+    0x00000924   0x00000924   0x0000019a   Code   RO            4    .text.DIO_WriteChannel  dio_program.o
+    0x00000abe   0x00000abe   0x00000002   PAD
+    0x00000ac0   0x00000ac0   0x0000002a   Code   RO           20    .text.GPIOF_Handler  dio_program.o
+    0x00000aea   0x00000aea   0x00000002   PAD
+    0x00000aec   0x00000aec   0x0000006a   Code   RO           82    .text.GPTM_delay_millisec  gptm_program.o
+    0x00000b56   0x00000b56   0x00000002   PAD
+    0x00000b58   0x00000b58   0x0000006e   Code   RO           80    .text.GPTM_delay_sec  gptm_program.o
+    0x00000bc6   0x00000bc6   0x00000002   PAD
+    0x00000bc8   0x00000bc8   0x0000000a   Code   RO           54    .text.IntCtrl_BasePriority  intctrl_lcfg.o
+    0x00000bd2   0x00000bd2   0x00000002   PAD
+    0x00000bd4   0x00000bd4   0x000000c0   Code   RO           63    .text.IntCtrl_Init  intctrl_program.o
+    0x00000c94   0x00000c94   0x0000003a   Code   RO           42    .text.MCU_CLOCK_PERIPHERALS  mcu_program.o
+    0x00000cce   0x00000cce   0x00000002   PAD
+    0x00000cd0   0x00000cd0   0x0000003e   Code   RO           36    .text.Mcu_InitClock  mcu_program.o
+    0x00000d0e   0x00000d0e   0x00000002   PAD
+    0x00000d10   0x00000d10   0x00000018   Code   RO           84    .text.TIMER0A_Handler  gptm_program.o
+    0x00000d28   0x00000d28   0x00000026   Code   RO          108    .text.main          main.o
+    0x00000d4e   0x00000d4e   0x0000001a   Code   RO          219    x$fpl$fpinit        fz_wm.l(fpinit.o)
+    0x00000d68   0x00000d68   0x0000000c   Data   RO           56    .rodata.Enabled_Interrupts_0_31  intctrl_lcfg.o
+    0x00000d74   0x00000d74   0x00000006   Data   RO           45    .rodata.MCU_Clocked_Peripherals  mcu_program.o
+    0x00000d7a   0x00000d7a   0x00000002   PAD
+    0x00000d7c   0x00000d7c   0x00000010   Data   RO          294    Region$$Table       anon$$obj.o
 
 
-    Execution Region ER_RW (Exec base: 0x20000000, Load base: 0x00000d94, Size: 0x00000000, Max: 0xffffffff, ABSOLUTE)
+    Execution Region ER_RW (Exec base: 0x20000000, Load base: 0x00000d8c, Size: 0x00000000, Max: 0xffffffff, ABSOLUTE)
 
     **** No section assigned to this execution region ****
 
 
-    Execution Region ER_ZI (Exec base: 0x20000000, Load base: 0x00000d94, Size: 0x00000280, Max: 0xffffffff, ABSOLUTE)
+    Execution Region ER_ZI (Exec base: 0x20000000, Load base: 0x00000d8c, Size: 0x00000280, Max: 0xffffffff, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -759,7 +759,7 @@ Memory Map of the image
     0x20000070        -       0x00000004   Zero   RW           67    .bss.Reg_offset     intctrl_program.o
     0x20000074        -       0x00000001   Zero   RW          111    .bss.off            main.o
     0x20000075        -       0x00000001   Zero   RW          110    .bss.on             main.o
-    0x20000076   0x00000d94   0x00000002   PAD
+    0x20000076   0x00000d8c   0x00000002   PAD
     0x20000078        -       0x00000004   Zero   RW           22    .bss.ptrToFn        dio_program.o
     0x2000007c        -       0x00000004   Zero   RW           23    .bss.reg            dio_program.o
     0x20000080        -       0x00000000   Zero   RW          119    HEAP                startup_tm4c123.o
@@ -773,7 +773,7 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-       262          0          0          0          0       1058   app.o
+       252          0          0          0          0       1059   app.o
       1372         36          0          0          8       4283   dio_program.o
        240          0          0          0          0       1405   gptm_program.o
         10          0         12          0          0       1469   intctrl_lcfg.o
@@ -783,9 +783,9 @@ Image component sizes
        284         28        620          0        512       5492   startup_tm4c123.o
 
     ----------------------------------------------------------------------
-      2538         64        656          0        544      18146   Object Totals
+      2530         64        656          0        544      18147   Object Totals
          0          0         16          0          0          0   (incl. Generated)
-        20          0          2          0          2          0   (incl. Padding)
+        22          0          2          0          2          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
@@ -833,15 +833,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-      2820         80        656          0        640      18526   Grand Totals
-      2820         80        656          0        640      18526   ELF Image Totals
-      2820         80        656          0          0          0   ROM Totals
+      2812         80        656          0        640      18527   Grand Totals
+      2812         80        656          0        640      18527   ELF Image Totals
+      2812         80        656          0          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                 3476 (   3.39kB)
+    Total RO  Size (Code + RO Data)                 3468 (   3.39kB)
     Total RW  Size (RW Data + ZI Data)               640 (   0.63kB)
-    Total ROM Size (Code + RO Data + RW Data)       3476 (   3.39kB)
+    Total ROM Size (Code + RO Data + RW Data)       3468 (   3.39kB)
 
 ==============================================================================
 

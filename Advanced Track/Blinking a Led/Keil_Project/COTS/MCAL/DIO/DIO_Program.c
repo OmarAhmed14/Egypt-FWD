@@ -4,6 +4,7 @@
 #include "DIO_Registers.h"
 
 static volatile u32* reg =0;
+
 void (*ptrToFn)(void)=0;
 
 u8 DIO_READChannel (u8 DIO_PORT, u8 DIO_PIN)
